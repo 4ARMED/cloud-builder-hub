@@ -3,7 +3,7 @@ LABEL maintainer="Marc Wickenden <marc@4armed.com>"
 
 ENV VERSION 2.8.4
 
-RUN apk --update add curl git && \
+RUN apk --update add curl git openssh-client && \
     curl -s -L -o /hub.tgz \
     https://github.com/github/hub/releases/download/v${VERSION}/hub-linux-amd64-${VERSION}.tgz && \
     tar xvzf /hub.tgz && \
